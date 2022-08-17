@@ -1,396 +1,442 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:fillViewport="true"
-    android:background="#ECECEC"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:background="#ECECEC">
 
-        <ImageView
-            android:id="@+id/imageTopMain"
+        <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scaleType="centerCrop"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/rectangle_6" />
+            app:toolbarId="@+id/toolbar"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="@color/darc_purple"
+            app:title="Saina Nexwal"
+            app:expandedTitleTextAppearance="@style/AppTheme"
+            app:collapsedTitleTextAppearance="@style/AppTheme"
+            app:collapsedTitleTextColor="@color/white"
+            app:expandedTitleTextColor="@color/white"
+            app:expandedTitleMarginBottom="50dp"
+            app:expandedTitleMarginStart="32dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="12dp"
-            app:layout_constraintEnd_toEndOf="@id/imageTopMain"
-            app:layout_constraintBottom_toBottomOf="@id/imageTopMain"
-            app:srcCompat="@drawable/layer_2_2" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="24dp"
-            android:textColor="@color/white"
-            android:layout_marginBottom="55dp"
-            android:layout_marginStart="34dp"
-            android:text="Saina Nexwal"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/imageTopMain"
-            app:layout_constraintBottom_toBottomOf="@id/imageTopMain"/>
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="12dp"
-            android:textColor="#66FFFFFF"
-            android:text="Indian badminton player"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/textView2"
-            app:layout_constraintTop_toBottomOf="@id/textView2"/>
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="13dp"
-            app:layout_constraintBottom_toTopOf="@id/textView2"
-            app:layout_constraintStart_toStartOf="@id/textView2"
-            app:srcCompat="@drawable/layer_2_1" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginStart="3dp"
-            app:layout_constraintStart_toEndOf="@id/imageView3"
-            app:layout_constraintBottom_toTopOf="@id/textView2"
-            app:srcCompat="@drawable/layer_3_1" />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="17dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imageTopMain"
-            app:srcCompat="@drawable/rectangle_8" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:layout_marginBottom="10dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:text="30"
-            app:layout_constraintTop_toTopOf="@id/imageView5"
-            app:layout_constraintBottom_toBottomOf="@id/imageView5"
-            app:layout_constraintStart_toStartOf="@id/imageView5"
-            app:layout_constraintEnd_toStartOf="@id/textView5"/>
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:text="2400"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintTop_toTopOf="@id/imageView5"
-            app:layout_constraintBottom_toBottomOf="@id/imageView5"
-            app:layout_constraintStart_toEndOf="@id/textView4"
-            app:layout_constraintEnd_toStartOf="@id/textView6"/>
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:text="16"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintTop_toTopOf="@id/imageView5"
-            app:layout_constraintBottom_toBottomOf="@id/imageView5"
-            app:layout_constraintStart_toEndOf="@id/textView5"
-            app:layout_constraintEnd_toStartOf="@id/textView7"/>
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:text="13"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintTop_toTopOf="@id/imageView5"
-            app:layout_constraintBottom_toBottomOf="@id/imageView5"
-            app:layout_constraintStart_toEndOf="@id/textView6"
-            app:layout_constraintEnd_toEndOf="@id/imageView5"/>
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#33000000"
-            android:textStyle="bold"
-            android:text="Game"
-            android:layout_marginBottom="10dp"
-            app:layout_constraintTop_toBottomOf="@id/textView4"
-            app:layout_constraintBottom_toBottomOf="@id/imageView5"
-            app:layout_constraintStart_toStartOf="@id/imageView5"
-            app:layout_constraintEnd_toStartOf="@id/textView5"/>
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Minutes"
-            android:layout_marginBottom="10dp"
-            android:textColor="#33000000"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/textView5"
-            app:layout_constraintBottom_toBottomOf="@id/imageView5"
-            app:layout_constraintStart_toEndOf="@id/textView4"
-            app:layout_constraintEnd_toStartOf="@id/textView6" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Shorts"
-            android:layout_marginBottom="10dp"
-            android:textColor="#33000000"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/textView6"
-            app:layout_constraintBottom_toBottomOf="@id/imageView5"
-            app:layout_constraintStart_toEndOf="@id/textView5"
-            app:layout_constraintEnd_toStartOf="@id/textView7" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Assists"
-            android:layout_marginBottom="10dp"
-            android:textColor="#33000000"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/textView7"
-            app:layout_constraintBottom_toBottomOf="@id/imageView5"
-            app:layout_constraintStart_toEndOf="@id/textView6"
-            app:layout_constraintEnd_toEndOf="@id/imageView5" />
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="match_parent"
-            android:layout_height="600dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imageView5"
-            app:srcCompat="@drawable/rectangle_10" />
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="24dp"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:layout_marginTop="40dp"
-            android:text="Physical Parameters"
-            app:layout_constraintTop_toTopOf="@id/imageView6"
-            app:layout_constraintStart_toStartOf="@id/imageView6"
-            app:layout_constraintEnd_toEndOf="@id/imageView6"/>
-
-        <HorizontalScrollView
-            android:id="@+id/horScroll"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="26dp"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/textView12"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:scrollbars="none">
-
-
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-
-                    <ImageView
-                        android:id="@+id/imageView7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="100dp"
-                        android:layout_marginBottom="10dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/rectangle_13" />
-
-                    <TextView
-                        android:id="@+id/textView13"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:textColor="@color/white"
-                        android:textStyle="bold"
-                        android:text="1.80m"
-                        android:layout_marginBottom="10dp"
-                        app:layout_constraintTop_toTopOf="@id/imageView7"
-                        app:layout_constraintEnd_toEndOf="@id/imageView7"
-                        app:layout_constraintStart_toStartOf="@id/imageView7"
-                        app:layout_constraintBottom_toBottomOf="@id/imageView7"/>
-
-                    <TextView
-                        android:id="@+id/textView16"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textColor="#D424E4"
-                        android:text="Height"
-                        android:layout_marginBottom="10dp"
-                        app:layout_constraintTop_toBottomOf="@id/textView13"
-                        app:layout_constraintEnd_toEndOf="@id/imageView7"
-                        app:layout_constraintStart_toStartOf="@id/imageView7"/>
+                    android:layout_height="250dp"
+                    android:layout_marginTop="-24dp"
+                    app:cardBackgroundColor="#37003C"
+                    app:cardCornerRadius="30dp"
+                    app:layout_collapseMode="parallax">
 
                     <ImageView
-                        android:id="@+id/imageView"
+                        android:id="@+id/imageView10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginBottom="10dp"
-                        app:layout_constraintStart_toEndOf="@id/imageView7"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/rectangle_13" />
-
-                    <TextView
-                        android:id="@+id/textView14"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="60kg"
-                        android:textColor="@color/white"
-                        android:textSize="20dp"
-                        android:layout_marginBottom="10dp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@id/imageView"
-                        app:layout_constraintEnd_toEndOf="@id/imageView"
-                        app:layout_constraintStart_toStartOf="@id/imageView"
-                        app:layout_constraintTop_toTopOf="@id/imageView" />
-
-                    <TextView
-                        android:id="@+id/textView17"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Weight"
-                        android:layout_marginBottom="10dp"
-                        android:textColor="#D424E4"
-                        android:textStyle="bold"
-                        app:layout_constraintTop_toBottomOf="@id/textView14"
-                        app:layout_constraintEnd_toEndOf="@id/imageView"
-                        app:layout_constraintStart_toStartOf="@id/imageView" />
+                        android:layout_gravity="end"
+                        app:srcCompat="@drawable/layer_1_2"
+                        app:layout_collapseMode="parallax"/>
 
                     <ImageView
-                        android:id="@+id/imageView8"
+                        android:id="@+id/imageView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginEnd="100dp"
-                        app:layout_constraintStart_toEndOf="@id/imageView"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/rectangle_13" />
+                        android:layout_gravity="bottom|end"
+                        app:srcCompat="@drawable/layer_2_2"/>
 
                     <TextView
-                        android:id="@+id/textView15"
+                        android:id="@+id/textView3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="32 Yrs"
-                        android:textColor="@color/white"
-                        android:textSize="20dp"
-                        android:layout_marginBottom="10dp"
+                        android:textSize="12sp"
+                        android:textColor="#66FFFFFF"
+                        android:text="@string/indian_badminton_player"
                         android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@id/imageView8"
-                        app:layout_constraintEnd_toEndOf="@id/imageView8"
-                        app:layout_constraintStart_toStartOf="@id/imageView8"
-                        app:layout_constraintTop_toTopOf="@id/imageView8" />
+                        android:layout_gravity="bottom|start"
+                        android:layout_marginBottom="27dp"
+                        android:layout_marginStart="37dp"
+                        app:layout_collapseMode="parallax"/>
 
-                    <TextView
-                        android:id="@+id/textView18"
+                    <ImageView
+                        android:id="@+id/imageView3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Age"
-                        android:layout_marginBottom="10dp"
-                        android:textColor="#D424E4"
-                        android:textStyle="bold"
-                        app:layout_constraintTop_toBottomOf="@id/textView15"
-                        app:layout_constraintEnd_toEndOf="@id/imageView8"
-                        app:layout_constraintStart_toStartOf="@id/imageView8" />
+                        android:layout_marginBottom="88dp"
+                        android:layout_gravity="bottom|start"
+                        android:layout_marginStart="38dp"
+                        app:srcCompat="@drawable/layer_2_1"
+                        app:layout_collapseMode="pin"/>
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="68dp"
+                        android:layout_marginBottom="88dp"
+                        android:layout_gravity="bottom|start"
+                        app:srcCompat="@drawable/layer_3_1"
+                        app:layout_collapseMode="pin"/>
+                </androidx.cardview.widget.CardView>
 
-        </HorizontalScrollView>
+            </LinearLayout>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                app:layout_collapseMode="pin"
+                android:background="#0000"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
 
-        <TextView
-            android:id="@+id/textView19"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="24dp"
-            android:textStyle="bold"
-            android:text="Biography"
-            android:layout_marginStart="87dp"
-            android:layout_marginTop="26dp"
-            app:layout_constraintTop_toBottomOf="@id/horScroll"
-            app:layout_constraintStart_toStartOf="parent"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="263dp"
-            android:layout_height="155dp"
-            android:text="Saina Nehwal is an Indian professional badminton player. A former world no. 1, she has won 24 international titles, which includes ten Superseries titles. Although she reached the world's 2nd in 2009, it was only in 2015 that she was able to attain the world "
-            android:textSize="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="20dp"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="@id/textView19"
-            app:layout_constraintTop_toBottomOf="@id/textView19"/>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ECECEC"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-        <TextView
-            android:id="@+id/textView21"
-            android:layout_width="263dp"
-            android:layout_height="155dp"
-            android:text="Saina Nehwal is an Indian professional badminton
-player. A former world no. 1,
-she has won 24 international
-titles, which includes ten
-Superseries titles. Although
-she reached the world's 2nd
-in 2009, it was only in 2015
-that she was able to attain
-the world "
-            android:textColor="@color/black"
-            android:textSize="16dp"
-            app:layout_constraintStart_toStartOf="@id/textView20"
-            app:layout_constraintTop_toBottomOf="@id/textView20" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:fillViewport="true">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <HorizontalScrollView
+                    android:id="@+id/horScroll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="500dp"
+                            android:layout_height="75dp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginTop="27dp"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginEnd="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView8"
+                            app:srcCompat="@drawable/rectangle_10dp" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:text="@string/_30"
+                            android:layout_marginTop="20dp"
+                            app:layout_constraintTop_toTopOf="@id/imageView5"
+                            app:layout_constraintStart_toStartOf="@id/imageView5"
+                            app:layout_constraintEnd_toStartOf="@id/textView5" />
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:text="@string/_2400"
+                            android:layout_marginBottom="10dp"
+                            app:layout_constraintTop_toTopOf="@id/imageView5"
+                            app:layout_constraintBottom_toBottomOf="@id/imageView5"
+                            app:layout_constraintStart_toEndOf="@id/textView4"
+                            app:layout_constraintEnd_toStartOf="@id/textView6" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:text="@string/_16"
+                            android:layout_marginBottom="10dp"
+                            app:layout_constraintTop_toTopOf="@id/imageView5"
+                            app:layout_constraintBottom_toBottomOf="@id/imageView5"
+                            app:layout_constraintStart_toEndOf="@id/textView5"
+                            app:layout_constraintEnd_toStartOf="@id/textView7" />
+
+                        <TextView
+                            android:id="@+id/textView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:text="@string/_13"
+                            android:layout_marginBottom="10dp"
+                            app:layout_constraintTop_toTopOf="@id/imageView5"
+                            app:layout_constraintBottom_toBottomOf="@id/imageView5"
+                            app:layout_constraintStart_toEndOf="@id/textView6"
+                            app:layout_constraintEnd_toEndOf="@id/imageView5" />
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#33000000"
+                            android:textStyle="bold"
+                            android:text="@string/game"
+                            android:layout_marginBottom="10dp"
+                            app:layout_constraintTop_toBottomOf="@id/textView4"
+                            app:layout_constraintBottom_toBottomOf="@id/imageView5"
+                            app:layout_constraintStart_toStartOf="@id/imageView5"
+                            app:layout_constraintEnd_toStartOf="@id/textView5" />
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/minutes"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="#33000000"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toBottomOf="@id/textView5"
+                            app:layout_constraintBottom_toBottomOf="@id/imageView5"
+                            app:layout_constraintStart_toEndOf="@id/textView4"
+                            app:layout_constraintEnd_toStartOf="@id/textView6" />
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/shorts"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="#33000000"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toBottomOf="@id/textView6"
+                            app:layout_constraintBottom_toBottomOf="@id/imageView5"
+                            app:layout_constraintStart_toEndOf="@id/textView5"
+                            app:layout_constraintEnd_toStartOf="@id/textView7" />
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="@string/assists"
+                            android:textColor="#33000000"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/imageView5"
+                            app:layout_constraintEnd_toEndOf="@id/imageView5"
+                            app:layout_constraintStart_toEndOf="@id/textView6"
+                            app:layout_constraintTop_toBottomOf="@id/textView7" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </HorizontalScrollView>
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginBottom="26dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/horScroll1"
+                    app:srcCompat="@drawable/rectangle" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/physical_parameters"
+                    app:layout_constraintTop_toTopOf="@id/imageView6"
+                    app:layout_constraintStart_toStartOf="@id/imageView6"
+                    app:layout_constraintEnd_toEndOf="@id/imageView6" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horScroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/textView12"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:scrollbars="none">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="100dp"
+                            android:layout_marginBottom="10dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/rectangle_13" />
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:text="@string/_1_80m"
+                            android:layout_marginBottom="10dp"
+                            app:layout_constraintTop_toTopOf="@id/imageView7"
+                            app:layout_constraintEnd_toEndOf="@id/imageView7"
+                            app:layout_constraintStart_toStartOf="@id/imageView7"
+                            app:layout_constraintBottom_toBottomOf="@id/imageView7" />
+
+                        <TextView
+                            android:id="@+id/textView16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textColor="#D424E4"
+                            android:text="@string/height"
+                            android:layout_marginBottom="10dp"
+                            app:layout_constraintTop_toBottomOf="@id/textView13"
+                            app:layout_constraintEnd_toEndOf="@id/imageView7"
+                            app:layout_constraintStart_toStartOf="@id/imageView7" />
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginBottom="10dp"
+                            app:layout_constraintStart_toEndOf="@id/imageView7"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/rectangle_13" />
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_60kg"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:layout_marginBottom="10dp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/imageView"
+                            app:layout_constraintEnd_toEndOf="@id/imageView"
+                            app:layout_constraintStart_toStartOf="@id/imageView"
+                            app:layout_constraintTop_toTopOf="@id/imageView" />
+
+                        <TextView
+                            android:id="@+id/textView17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/weight"
+                            android:textColor="#D424E4"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="@id/imageView"
+                            app:layout_constraintStart_toStartOf="@id/imageView"
+                            app:layout_constraintTop_toBottomOf="@id/textView14" />
+
+                        <ImageView
+                            android:id="@+id/imageView8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="100dp"
+                            app:layout_constraintStart_toEndOf="@id/imageView"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:srcCompat="@drawable/rectangle_13" />
+
+                        <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_32_yrs"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:layout_marginBottom="10dp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/imageView8"
+                            app:layout_constraintEnd_toEndOf="@id/imageView8"
+                            app:layout_constraintStart_toStartOf="@id/imageView8"
+                            app:layout_constraintTop_toTopOf="@id/imageView8" />
+
+                        <TextView
+                            android:id="@+id/textView18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/age"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="#D424E4"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toBottomOf="@id/textView15"
+                            app:layout_constraintEnd_toEndOf="@id/imageView8"
+                            app:layout_constraintStart_toStartOf="@id/imageView8" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:text="@string/biography"
+                    android:layout_marginStart="87dp"
+                    android:layout_marginTop="26dp"
+                    app:layout_constraintTop_toBottomOf="@id/horScroll"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="100dp"
+                    android:text="@string/saina_nehwal_is_an_indian_professional_badminton_player_a_former_world_no_1_she_has_won_24_international_titles_which_includes_ten_superseries_titles_although_she_reached_the_world_s_2nd_in_2009_it_was_only_in_2015_that_she_was_able_to_attain_the_world_saina_nehwal_is_an_indian_professional_badminton_player_a_former_world_no_1_she_has_won_24_internationatitles_which_includes_tensuperseries_titles_althoughshe_reached_the_world_s_2ndin_2009_it_was_only_in_2015that_she_was_able_to_attainthe_world"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="26dp"
+                    app:layout_constraintBottom_toBottomOf="@id/imageView6"
+                    app:layout_constraintEnd_toEndOf="@id/imageView6"
+                    app:layout_constraintStart_toStartOf="@id/textView19"
+                    app:layout_constraintTop_toBottomOf="@id/textView19" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
